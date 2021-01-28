@@ -6,7 +6,7 @@ const appRouter = require('./app/server');
 
 app.use('/api', apiRouter);
 app.use('/app', appRouter);
-
+app.use('/static', express.static('public'));
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
