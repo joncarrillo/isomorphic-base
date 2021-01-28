@@ -1,15 +1,16 @@
 const express = require('express');
+const {server : {port}} = require('./config/default');
 const app = express();
-const port = 3000;
+const apiRouter = require('./api');
+const appRouter = require('./app/server');
 
-app.get('/app', (req, res) => {
-    res.sendFile(__dirname + '/app/template.html');
-});
+app.use('/api', apiRouter);
+app.use('/app', appRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.get('/ping', (req, res) => {
+  res.send('pong');
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`);
 });
