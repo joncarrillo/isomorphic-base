@@ -5,7 +5,7 @@ _[What is this PR about?]_
 _[Why did you do it?]_
 
 ## Issue link
-_[Add Jira link]_
+_[Add issue link]_
 
 ## How
 _[How did you do it?]_
