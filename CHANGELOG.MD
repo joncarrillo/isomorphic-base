@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 First version SSR base.
  
 ### Added
-- Sample description. [@joncarrillo](https://github.com/joncarrillo). PR: [#1](https://github.com/joncarrillo/isomorphic-base/pull/1)
+- Feature/ssr express base. [@joncarrillo](https://github.com/joncarrillo). PR: [#1](https://github.com/joncarrillo/isomorphic-base/pull/1)
  
 ### Changed
  
