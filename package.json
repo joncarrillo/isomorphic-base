@@ -8,9 +8,10 @@
     "build": "NODE_ENV=development webpack",
     "dist": "NODE_ENV=production webpack",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint *.js config app api",
-    "lint:css": "stylelint '**/*.css'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:js": "eslint index.js 'api/**/*.js' 'app/**/*.js' 'config/**/*.js'",
+    "lint:css": "stylelint 'app/**/*.scss'",
+    "test": "npm run test:unit",
+    "test:unit": "NODE_ENV=test jest --config jest.config.js --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,17 +24,31 @@
   },
   "homepage": "https://github.com/joncarrillo/isomorphic-base#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "babel-eslint": "^10.1.0",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/react": "^11.2.7",
+    "babel-jest": "^27.0.1",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.5",
     "eslint": "^7.26.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.1",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^6.0.0",
+    "react-test-renderer": "^17.0.2",
     "sass-loader": "^11.1.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
